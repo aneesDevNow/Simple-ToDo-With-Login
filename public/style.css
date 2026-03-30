@@ -610,21 +610,109 @@ body {
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  .top-bar {
+    padding: 12px 16px;
+  }
+  .app-title {
+    font-size: 18px;
+  }
+  .user-greeting {
+    display: none;
+  }
   .main-content {
     flex-direction: column;
+    height: auto;
+    min-height: calc(100vh - 57px);
+    overflow: visible;
   }
   .schedule-panel {
     width: 100%;
     min-width: 100%;
-    max-height: 40vh;
+    max-height: none;
     border-right: none;
     border-bottom: 1px solid var(--border);
+    overflow-y: visible;
+    padding: 16px;
+  }
+  .panel-header {
+    margin-bottom: 16px;
+  }
+  .panel-header h2 {
+    font-size: 18px;
+  }
+  .lists-panel {
+    padding: 16px;
+    overflow-y: visible;
   }
   .lists-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .list-card-header {
+    padding: 16px;
+  }
+  .list-card-title {
+    font-size: 17px;
+  }
+  .list-card-actions {
+    opacity: 1;
+  }
+  .list-todo-item {
+    padding: 10px 16px;
+    gap: 10px;
+  }
+  .list-todo-item .todo-delete {
+    opacity: 1;
+  }
+  .schedule-todo {
+    padding: 12px 14px;
   }
   .auth-card {
-    padding: 32px 24px;
+    padding: 32px 20px;
+    border-radius: 16px;
+  }
+  .auth-logo {
+    font-size: 24px;
+  }
+  .modal {
+    padding: 24px 20px;
+    margin: 12px;
+    max-width: 100%;
+  }
+  .fab {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .top-bar {
+    padding: 10px 12px;
+  }
+  .app-title {
+    font-size: 16px;
+  }
+  .btn-logout {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .schedule-panel,
+  .lists-panel {
+    padding: 12px;
+  }
+  .list-todo-item {
+    padding: 10px 12px;
+  }
+  .auth-card {
+    padding: 24px 16px;
+  }
+  .form-group input,
+  .form-group select {
+    padding: 10px 12px;
+    font-size: 14px;
   }
 }
 
